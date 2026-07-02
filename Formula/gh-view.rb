@@ -1,15 +1,21 @@
 class GhView < Formula
   desc "Terminal view for GitHub pull requests"
   homepage "https://github.com/nikitaivanovvff/gh-view"
-  url "https://github.com/nikitaivanovvff/gh-view/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "4eb79d6b5565e38113ab4e25986e4f20bb708ef774da3815c5f7921d59341651"
+  version "0.0.1"
   license "MIT"
 
-  depends_on "rust" => :build
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/nikitaivanovvff/gh-view/releases/download/v0.0.1/gh-view-v0.0.1-aarch64-apple-darwin.tar.gz"
+    sha256 "76605cbde3ebd0f01eabcdff5d5ba8e36720db724f5ae27d2de9f5803e4c4651"
+  elsif OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/nikitaivanovvff/gh-view/releases/download/v0.0.1/gh-view-v0.0.1-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "547d4bed0de4f1f4666a28e4c3b70d7297631298fad3c6e69b0d8c5d42a7d688"
+  end
+
   depends_on "gh"
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "gh-view"
   end
 
   test do
