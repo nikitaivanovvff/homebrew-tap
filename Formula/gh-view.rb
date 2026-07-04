@@ -6,10 +6,10 @@ class GhView < Formula
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/nikitaivanovvff/gh-view/releases/download/v0.0.1/gh-view-v0.0.1-aarch64-apple-darwin.tar.gz"
-    sha256 "eaca82ed2d36ceb82973ae5664eafa504197883fe683fa1086cac1d2369c084b"
+    sha256 "eb76bdb10c1e61f344f53468672ec6462242aea87e1ceffd7bfa7a63bf60d661"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/nikitaivanovvff/gh-view/releases/download/v0.0.1/gh-view-v0.0.1-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "cf00cbc889032a87197482f1327013fe4e15871fbd6fea0c6608197d74b168b6"
+    sha256 "aaca4e2c232c496363a0d98463eba0e60de90ed1adf39d199a111ee982d89a90"
   end
 
   depends_on "gh"
