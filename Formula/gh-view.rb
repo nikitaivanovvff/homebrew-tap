@@ -1,15 +1,15 @@
 class GhView < Formula
   desc "Terminal view for GitHub pull requests"
   homepage "https://github.com/nikitaivanovvff/gh-view"
-  version "0.0.5"
+  version "1.0.0"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/nikitaivanovvff/gh-view/releases/download/v0.0.5/gh-view-v0.0.5-aarch64-apple-darwin.tar.gz"
-    sha256 "7d07f634c69db8f21fd65f2a0c87baa52b538ae24f2f3c0986ceb771cc8486ee"
+    url "https://github.com/nikitaivanovvff/gh-view/releases/download/v1.0.0/gh-view-v1.0.0-aarch64-apple-darwin.tar.gz"
+    sha256 "9c6a7b5b421ace3f5e353b73304f3f29e0f68ea42a65073de9ea428c344a7447"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/nikitaivanovvff/gh-view/releases/download/v0.0.5/gh-view-v0.0.5-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "e2b461e726cb56a9022f971da47a3c3db0392a4d76211a94e20e07d21c87a554"
+    url "https://github.com/nikitaivanovvff/gh-view/releases/download/v1.0.0/gh-view-v1.0.0-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "0bb6e33f7606c517f6d59b126d4a9dc548319199a4644bf555ebb189f45198f7"
   end
 
   depends_on "gh"
